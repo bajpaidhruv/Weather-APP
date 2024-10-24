@@ -34,7 +34,7 @@ const button = document.getElementById('search-button');
         async function getData(cityname) {
             try {
                 loading.classList.remove('hidden');
-                const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=86e0a8b90729450ebf362400242410&q=${cityname}&aqi=yes`);
+                const promise = await fetch(`https://api.weatherapi.com/v1/current.json?key=86e0a8b90729450ebf362400242410&q=${cityname}&aqi=yes`);
                 const data = await promise.json();
                 if (data.error) {
                     throw new Error(data.error.message);
